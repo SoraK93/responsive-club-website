@@ -4,8 +4,9 @@
 :root {
   --font-size: 20px;
   --primary-bgColor: rgb(78, 22, 151);
+  --primary-bgColor-opac: rgba(78, 22, 151, 0.65);
   --primary-textColor: rgb(236, 232, 223);
-  --secondary-textColor: rgb(159, 126, 221);
+  --secondary-textColor: rgb(121, 68, 219);
 }
 
 /* defaults */
@@ -76,7 +77,7 @@ html {
   text-align: center;
 }
 .intro h1 {
-  color: var(--secondary-textColor);
+  color: var(--primary-textColor);
   padding: 0.8em;
   font-size: 7.5rem;
   text-shadow: 0 0 3px black;
@@ -89,6 +90,8 @@ html {
   .intro h1 {
     font-size: 4.5rem;
     padding: 1em 0.5em;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
   }
 }
 
@@ -111,6 +114,117 @@ html {
   }
 }
 
-img {
-  width: 20em;
+/* quote */
+.quote {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 2px black inset;
+}
+.quote p {
+  color: var(--secondary-textColor);
+  font-size: 5rem;
+  text-align: left;
+}
+.quote img {
+  border-radius: 1em;
+  width: 55%;
+  margin: 1em;
+  box-shadow: 0 0 5px 2px black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .quote p {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .quote p {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .quote p {
+    font-size: 1.5rem;
+  }
+}
+
+/* community */
+.community {
+  background-color: var(--primary-bgColor);
+  padding: 1em;
+}
+.community h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.community div:nth-child(2) {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.community img {
+  max-width: 30%;
+  min-width: 400px;
+}
+
+/* outro */
+.outro {
+  background-image: url("./outro-bg.jpg");
+  background-position: 50% 60%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+}
+.outro div {
+  width: 45%;
+  padding: 1.5em;
+  background-color: var(--primary-bgColor-opac);
+  border-radius: 0 1em 1em 0;
+}
+.outro h2 {
+  font-size: 4em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .outro {
+    background-position: 68% 72%;
+    height: 40rem;
+  }
+  .outro h2 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .outro {
+    background-position: 68% 72%;
+    height: 20rem;
+  }
+  .outro h2 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .outro {
+    background-position: 68% 72%;
+    height: 20rem;
+  }
+  .outro h2 {
+    font-size: 1em;
+  }
+}
+
+/* footer */
+footer {
+  height: 2em;
+  background-color: var(--primary-bgColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
