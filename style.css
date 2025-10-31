@@ -1,19 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
 
 /* css variables */
 :root {
   --font-size: 20px;
+  --primary-bgColor: rgb(78, 22, 151);
+  --primary-textColor: rgb(236, 232, 223);
+  --secondary-textColor: rgb(159, 126, 221);
 }
 
 /* defaults */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
+  color: var(--primary-textColor);
   font-size: var(--font-size);
   font-family: "Macondo", cursive, serif;
+}
+
+/* navbar */
+.navbar {
+  height: 40px;
+  background-color: var(--primary-bgColor);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+}
+.navbar nav {
+  height: inherit;
+}
+.nav {
+  height: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav li {
+  text-align: center;
+  width: 15em;
+  height: inherit;
+  list-style-type: none;
+}
+.nav li:hover {
+  background-color: rgb(109, 9, 190);
+}
+.nav a {
+  text-decoration: none;
+  color: var(--primary-textColor);
+  font-size: 1.5rem;
+}
+.mobile {
+  display: none;
+}
+.mobile img {
+  width: 30px;
+}
+
+@media only screen and (max-width: 760px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+}
+
+/* Intro */
+.intro {
+  background-image: url(./intro-bg.jpg);
+  background-position: 52% 60%;
+  height: 40rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.intro h1 {
+  color: var(--secondary-textColor);
+  padding: 0.8em;
+  font-size: 7.5rem;
+  text-shadow: 0 0 3px black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .intro {
+    height: 35rem;
+  }
+  .intro h1 {
+    font-size: 4.5rem;
+    padding: 1em 0.5em;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .intro {
+    height: 25rem;
+  }
+  .intro h1 {
+    font-size: 4.5rem;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .intro {
+    height: 15rem;
+  }
+  .intro h1 {
+    font-size: 2.5rem;
+  }
 }
 
 img {
